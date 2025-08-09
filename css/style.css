@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 521px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #f0f8ff;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+input,
+select {
+    padding: 5px;
+    width: 100%;
+    /* eliminăm max-width pentru mobil */
+    box-sizing: border-box;
+}
+
+/* Buton mare și ușor de apăsat */
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #246b43;
+}
+
+tr:hover {
+    background-color: #d0f0d0;
+    cursor: pointer;
+}
+
+/* Tabel cu scroll orizontal pe mobil */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+    display: block;
+}
+
+th,
+td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#total {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#chart-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+/* Schimbare layout form pe desktop (mai lat) */
+@media (min-width: 480px) {
+    form label {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    input,
+    select {
+        max-width: 200px;
+    }
+    form label > *:first-child {
+        flex: 1;
+    }
+}
+
+/* Alte îmbunătățiri mobile */
+@media (max-width: 479px) {
+    body {
+        margin: 10px;
+        padding: 5px;
+    }
+}

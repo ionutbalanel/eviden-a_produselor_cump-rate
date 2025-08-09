@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Lista cumpărături</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <h2>Ajutor la cumpărături 🛒</h2>
+
+    <form id="produs-form">
+        <label>Nume produs:
+            <input type="text" id="numeProdus" required />
+        </label>
+
+        <label>Preț pe unitate (kg/buc):
+            <input type="number" id="pret" min="0.01" step="0.01" required />
+        </label>
+
+        <label>Unitate de măsură:
+            <select id="unitate">
+                <option value="kg">Kg</option>
+                <option value="buc">Bucată</option>
+            </select>
+        </label>
+
+        <label>Cantitate:
+            <input type="text" id="cantitate" min="0.01" step="0.01" required />
+        </label>
+
+        <button type="submit">Adaugă produs</button>
+    </form>
+
+    <table id="tabela-produse">
+        <thead>
+            <tr>
+                <th>Produs</th>
+                <th>Preț/unitate</th>
+                <th>Unitate</th>
+                <th>Cantitate</th>
+                <th>Cost</th>
+                <th>Acțiune</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="total">Total: 0 lei</div>
+
+    <div id="chart-container">
+        <canvas id="grafic"></canvas>
+    </div>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
